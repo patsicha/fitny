@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ExerciseID</key>
+	<array>
+		<string>TCS001</string>
+		<string>TCS002</string>
+		<string>TCS003</string>
+		<string>TCW001</string>
+		<string>TCW002</string>
+		<string>TCW003</string>
+		<string>TCW004</string>
+		<string>TCW005</string>
+		<string>TCW006</string>
+		<string>TCW007</string>
+		<string>TCW008</string>
+		<string>TCN001</string>
+		<string>TCN002</string>
+		<string>TCN003</string>
+		<string>TCN004</string>
+	</array>
+	<key>ExerciseName</key>
+	<array>
+		<string>Overhead Triceps</string>
+		<string>Tricep Side Stretch</string>
+		<string>Triceps Stretch</string>
+		<string>Close Grip Barbell Bench Press</string>
+		<string>Close Grip Dumbbell Press</string>
+		<string>Close Grip EZBar Press</string>
+		<string>Dumbbell One Arm Triceps Extension</string>
+		<string>Seated Triceps Press</string>
+		<string>Tate Press</string>
+		<string>Tricep Dumbbell Kickback</string>
+		<string>Triceps Pushdown</string>
+		<string>Bench Dips</string>
+		<string>Body Tricep Press</string>
+		<string>Body Up</string>
+		<string>Push Ups Close Triceps Position</string>
+	</array>
+	<key>ExerciseType</key>
+	<array>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+	</array>
+</dict>
+</plist>
