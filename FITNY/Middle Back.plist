@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ExerciseID</key>
+	<array>
+		<string>MIS001</string>
+		<string>MIS002</string>
+		<string>MIS003</string>
+		<string>MIW001</string>
+		<string>MIW002</string>
+		<string>MIW003</string>
+		<string>MIW004</string>
+		<string>MIW005</string>
+		<string>MIN001</string>
+		<string>MIN002</string>
+		<string>MIN003</string>
+		<string>MIN004</string>
+		<string>MIN005</string>
+	</array>
+	<key>ExerciseName</key>
+	<array>
+		<string>Middle Back Stretch</string>
+		<string>Spinal Stretch</string>
+		<string>Upper Back Stretch</string>
+		<string>Bent Over Barbell Row</string>
+		<string>Bent Over One Arm Long Bar Row</string>
+		<string>Bent Over Two Arm Long Bar Row</string>
+		<string>Bent Over Two Dumbbell Row</string>
+		<string>One Arm Dumbbell Row</string>
+		<string>Bodyweight Mid Row</string>
+		<string>Mixed Grip Chin</string>
+		<string>One Arm Chin Up</string>
+		<string>Sled Row</string>
+		<string>Suspended Row</string>
+	</array>
+	<key>ExerciseType</key>
+	<array>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+		<string>Middle Back</string>
+	</array>
+</dict>
+</plist>

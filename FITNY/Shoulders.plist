@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ExerciseID</key>
+	<array>
+		<string>ZHS001</string>
+		<string>ZHS002</string>
+		<string>ZHS003</string>
+		<string>ZHS004</string>
+		<string>ZHS005</string>
+		<string>ZHS006</string>
+		<string>ZHS007</string>
+		<string>ZHW001</string>
+		<string>ZHW002</string>
+		<string>ZHW003</string>
+		<string>ZHW004</string>
+		<string>ZHW005</string>
+		<string>ZHW006</string>
+		<string>ZHW007</string>
+		<string>ZHW008</string>
+		<string>ZHW009</string>
+		<string>ZHW010</string>
+		<string>ZHW011</string>
+		<string>ZHW012</string>
+		<string>ZHW013</string>
+		<string>ZHN001</string>
+	</array>
+	<key>ExerciseName</key>
+	<array>
+		<string>Elbow Circles</string>
+		<string>Seated Front Deltoid</string>
+		<string>Shoulder Circles</string>
+		<string>Shoulder Raise</string>
+		<string>Shoulder Stretch</string>
+		<string>Side Wrist Pull</string>
+		<string>Upward Stretch</string>
+		<string>Arnold Dumbbell Press</string>
+		<string>Barbell Shoulder Press</string>
+		<string>Cuban Press</string>
+		<string>Dumbbell Incline Shoulder Raise</string>
+		<string>Dumbbell Lying Rear Lateral Raise</string>
+		<string>Dumbbell One Arm Shoulder Press</string>
+		<string>Dumbbell Raise</string>
+		<string>Dumbbell Shoulder Press</string>
+		<string>Front Dumbbell Raise</string>
+		<string>Front Incline Dumbbell Raise</string>
+		<string>Seated Bent Over Rear Delt Raise</string>
+		<string>Seated Dumbbell Press</string>
+		<string>Upright Barbell Row</string>
+		<string>Handstand Push Ups</string>
+	</array>
+	<key>ExerciseType</key>
+	<array>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+		<string>Shoulders</string>
+	</array>
+</dict>
+</plist>

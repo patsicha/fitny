@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ExerciseID</key>
+	<array>
+		<string>ABS001</string>
+        <string>ABS002</string>
+        <string>ABS003</string>
+        <string>ABS004</string>
+        <string>ABW001</string>
+        <string>ABW002</string>
+        <string>ABW003</string>
+        <string>ABW004</string>
+        <string>ABW005</string>
+        <string>ABN001</string>
+        <string>ABN002</string>
+        <string>ABN003</string>
+        <string>ABN004</string>
+        <string>ABN005</string>
+	</array>
+    <key>ExerciseName</key>
+	<array>
+        <!--  Stretching  -->
+		<string>Lower Back Curl</string>
+        <string>Overhead Stretch</string>
+        <string>Scissor Kick</string>
+        <string>Seated Overhead Stretch</string>
+        <!--  With Weights  -->
+        <string>Ball Pull In</string>
+        <string>Barbell Ab Rollout</string>
+        <string>Cable Crunch</string>
+        <string>Dumbbell Side Bend</string>
+        <string>Rope Crunch</string>
+        <!--  Without Weights  -->
+        <string>Bottoms Up</string>
+        <string>Plank</string>
+        <string>Side Bridge</string>
+        <string>Sit Up</string>
+        <string>Tuck Crunch</string>
+	</array>
+    <key>ExerciseType</key>
+	<array>
+		<string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+        <string>Abdominals</string>
+	</array>
+</dict>
+</plist>
