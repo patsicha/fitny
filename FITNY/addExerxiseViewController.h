@@ -12,7 +12,7 @@
 
 @protocol AddExDelegate;
 
-@interface addExerxiseViewController : UITableViewController<SimplePickerInputTableViewCell2Delegate,UIAlertViewDelegate>
+@interface addExerxiseViewController : UITableViewController<SimplePickerInputTableViewCell2Delegate,UIAlertViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (assign, nonatomic) id <AddExDelegate>delegate;
 @property (strong,nonatomic) NSManagedObject* exerciseInfo;
 @property (strong,nonatomic) NSString* ProgramType;

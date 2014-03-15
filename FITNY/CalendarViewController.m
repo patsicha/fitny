@@ -58,9 +58,9 @@
     calendar1.dataSource = self;
     
     [calendar1 selectDate:[NSDate date]];
+    NSLog(@"%f",self.tableView.frame.origin.y);
     [self.view addSubview:calendar1];
     [calendar1 reloadData];
-    
     
     //[self getData];
 }
@@ -145,6 +145,10 @@
 - (void) calendarMonthView:(TKCalendarMonthView*)mv monthDidChange:(NSDate*)d animated:(BOOL)animated{
      //[self viewDidAppear:YES];
 	[self.tableView reloadData];
+    if(calendar1.bounds.size.height < 300)
+        _tableView.frame = CGRectMake(_tableView.frame.origin.x,calendar1.bounds.size.height+10, _tableView.frame.size.width, 146);
+    else
+        _tableView.frame = CGRectMake(_tableView.frame.origin.x,calendar1.bounds.size.height+10, _tableView.frame.size.width, 146-44);
 }
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;

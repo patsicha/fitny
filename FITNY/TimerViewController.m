@@ -9,6 +9,8 @@
 #import "TimerViewController.h"
 #import "CircularTimerView.h"
 
+#define SPEED_BYREP 5 // seconds
+
 @interface TimerViewController ()
 {
     UIAlertView *loading;
@@ -136,11 +138,23 @@
             }
             
         }
+    }else{
+        for(NSString *x in [dataProgramDetail valueForKey:@"amount"])
+        {
+            //NSLog(@"%@",x);
+            NSArray *arrX = [x componentsSeparatedByString:@" "];
+            
+                [Seconds addObject:arrX[0]];
+                [Minutes addObject:@"0"];
+            
+        }
+        
+    }
         Rest = NO;
         currExNum = -1;
         //currMinute=[Minutes[currExNum] intValue];
         //currSeconds=[Seconds[currExNum] intValue];
-    }
+    
     [self.tableView reloadData];
 }
 - (IBAction)skip:(id)sender {
@@ -187,6 +201,10 @@
             currExNum++;
             currMinute=[Minutes[currExNum] intValue];
             currSeconds=[Seconds[currExNum] intValue];
+            if([ptype isEqualToString:@"By Rep"])
+            {
+                currSeconds=[Seconds[currExNum] intValue] * SPEED_BYREP;
+            }
             prepare--;
             NSManagedObject *programInfo;
             programInfo = [dataProgramDetail objectAtIndex:currExNum];
@@ -263,6 +281,10 @@
                 
                 currMinute=[Minutes[currExNum] intValue];
                 currSeconds=[Seconds[currExNum] intValue];
+                if([ptype isEqualToString:@"By Rep"])
+                {
+                    currSeconds=[Seconds[currExNum] intValue] * SPEED_BYREP;
+                }
                 Rest = !Rest;
                 
             }else {
@@ -360,7 +382,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Cell4";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -441,31 +463,6 @@
             [dateFormatter setDateStyle:NSDateFormatterFullStyle];
             NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:[formatter stringFromDate:Today],@"date",pid,@"pid", nil];
             [Done addObject:temp];
-            [prefs setObject:Done forKey:@"ProgramDone"];
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-        
-    }else{
-        if(indexPath.row==0) {
-            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            cell.userInteractionEnabled = NO;
-        }
-        if(indexPath.row == 2 && !(currExNum < [dataProgramDetail count]))
-        {
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            Done = [prefs objectForKey:@"ProgramDone"];
-            if(Done == NULL) Done = [[NSMutableArray alloc]init];
-            NSDate *Today = [NSDate date];
-            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"yyyy-MM-dd"];
-            
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateStyle:NSDateFormatterFullStyle];
-            NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:[formatter stringFromDate:Today],@"date",pid,@"pid", nil];
-            NSUInteger idx = [Done indexOfObject:temp];
-            //NSLog(@"%lu",(unsigned long)idx );
-            if(idx > [Done count])[Done addObject:temp];
-            // NSLog(@"%@",Done);
             [prefs setObject:Done forKey:@"ProgramDone"];
             [self.navigationController popViewControllerAnimated:YES];
         }

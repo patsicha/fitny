@@ -18,4 +18,5 @@
     #import "UIViewController+MJPopupViewController.h"
     #define font1(s) [UIFont fontWithName:@"KGAlwaysAGoodTime" size:s]
     #define font2(s) [UIFont fontWithName:@"Lane-Narrow" size:s]
+    #define fontthai(s) [UIFont fontWithName:@"ThaiSansNeue-Regular" size:s]
 #endif

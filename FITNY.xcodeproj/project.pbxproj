@@ -103,6 +103,8 @@
 		1C32CEE618B53A8A002201CB /* ExerciseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C32CEE518B53A8A002201CB /* ExerciseTabBarController.m */; };
 		1C32CEEC18B53EBB002201CB /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C32CEEB18B53EBB002201CB /* DescriptionViewController.m */; };
 		1C32CEEF18B54540002201CB /* MuscleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C32CEEE18B54540002201CB /* MuscleViewController.m */; };
+		1C40DEE318D0A4B800E61A32 /* thai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C40DEE218D0A4B800E61A32 /* thai.ttf */; };
+		1C40DEE818D0C1EE00E61A32 /* ProgramSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40DEE718D0C1EE00E61A32 /* ProgramSettingsViewController.m */; };
 		1C43921118510EB0005DB09D /* TabProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43921018510EB0005DB09D /* TabProgramViewController.m */; };
 		1C43921418511072005DB09D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43921318511072005DB09D /* CalendarViewController.m */; };
 		1C45A9AE18C4CAB300892C88 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C45A9AD18C4CAB300892C88 /* Images-2.xcassets */; };
@@ -1092,6 +1094,9 @@
 		1C32CEEB18B53EBB002201CB /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
 		1C32CEED18B54540002201CB /* MuscleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuscleViewController.h; sourceTree = "<group>"; };
 		1C32CEEE18B54540002201CB /* MuscleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuscleViewController.m; sourceTree = "<group>"; };
+		1C40DEE218D0A4B800E61A32 /* thai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = thai.ttf; sourceTree = "<group>"; };
+		1C40DEE618D0C1EE00E61A32 /* ProgramSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramSettingsViewController.h; sourceTree = "<group>"; };
+		1C40DEE718D0C1EE00E61A32 /* ProgramSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramSettingsViewController.m; sourceTree = "<group>"; };
 		1C43920F18510EB0005DB09D /* TabProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabProgramViewController.h; sourceTree = "<group>"; };
 		1C43921018510EB0005DB09D /* TabProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabProgramViewController.m; sourceTree = "<group>"; };
 		1C43921218511072005DB09D /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
@@ -2187,6 +2192,8 @@
 				1C130F09185490000079552C /* ProgramDetailViewController.m */,
 				1C1311801855107A0079552C /* AddToCalendarViewController.h */,
 				1C1311811855107A0079552C /* AddToCalendarViewController.m */,
+				1C40DEE618D0C1EE00E61A32 /* ProgramSettingsViewController.h */,
+				1C40DEE718D0C1EE00E61A32 /* ProgramSettingsViewController.m */,
 			);
 			name = Programs;
 			sourceTree = "<group>";
@@ -2340,6 +2347,7 @@
 		1C72528118A0DD08008E8749 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				1C40DEE218D0A4B800E61A32 /* thai.ttf */,
 				1C72528218A0DD17008E8749 /* LANENAR.ttf */,
 				1C72528318A0DD17008E8749 /* KGAlwaysAGoodTime.ttf */,
 			);
@@ -5004,6 +5012,7 @@
 				1CE0D08518327D78004FA073 /* 84-lightbulb.png in Resources */,
 				1CE764E11844F4AC00A1898D /* Dumbbell Bicep Curl.txt in Resources */,
 				1CE766A61844F4AC00A1898D /* Close Grip Dumbbell Press.mp4 in Resources */,
+				1C40DEE318D0A4B800E61A32 /* thai.ttf in Resources */,
 				1CE765811844F4AC00A1898D /* Hammer Curls.jpg in Resources */,
 				1CE765C61844F4AC00A1898D /* Scissors Jump.jpg in Resources */,
 				1CE0D07F18327D78004FA073 /* 78-stopwatch.png in Resources */,
@@ -5119,6 +5128,7 @@
 				1C1311471854D1A50079552C /* TKLabelCell.m in Sources */,
 				1CAE515718B895F200E85A9B /* VideoViewController.m in Sources */,
 				1C05587F18B5004F00361591 /* TimerViewController.m in Sources */,
+				1C40DEE818D0C1EE00E61A32 /* ProgramSettingsViewController.m in Sources */,
 				1C1311611854D1A50079552C /* UIBarButtonItem+TKCategory.m in Sources */,
 				1C1311651854D1A50079552C /* UIFont+TKCategory.m in Sources */,
 				1CED93971833C0F500BEC19D /* TPKeyboardAvoidingTableView.m in Sources */,

@@ -18,46 +18,31 @@
     IBOutlet UIButton *btnTime;
     IBOutlet UIButton *btnRep;
     IBOutlet UISlider *amount;
+    IBOutlet UIPickerView *amountPicker;
+    IBOutlet UIPickerView *amountRepPicker;
+    NSMutableArray *pickerRep;
+    NSMutableArray *pickerHr;
+    NSMutableArray *pickerMin;
+    NSMutableArray *pickerSec;
+    NSInteger RepPicker_index;
+    NSInteger HrPicker_index;
+    NSInteger MinPicker_index;
+    NSInteger SecPicker_index;
+    IBOutlet UIButton *btnDone;
 }
 @property (weak, nonatomic) IBOutlet UITableViewCell *txtProgramType;
 @property (weak, nonatomic) IBOutlet SimplePickerInputTableViewCell2 *txtProgramName;
 @property (weak, nonatomic) IBOutlet UITableViewCell *txtExerciseName;
 @property (weak, nonatomic) IBOutlet UITableViewCell *txtExerciseType;
-@property (weak, nonatomic) IBOutlet UITableViewCell *txtExerciseAmount;
+@property (weak, nonatomic) IBOutlet StringInputTableViewCell2 *txtExerciseAmount;
 @property (weak, nonatomic) IBOutlet StringInputTableViewCell2 *txtNewProgram;
-
+@property (nonatomic, retain) UIView *inputAccView;
 
 @end
 
 @implementation addExerxiseViewController
-@synthesize exerciseInfo,ProgramType,receivedData,delegate;
-- (IBAction)amount:(id)sender {
-    if ([ProgramType isEqualToString:@"By Rep"]) {
-        amount.maximumValue = 50;
-        self.txtExerciseAmount.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%d Reps",(int)amount.value ];
-        // self.txtExerciseAmount.values = [NSArray arrayWithObjects:@"-",@"1 Rep",@"2 Reps", @"3 Reps", @"4 Reps", @"5 Reps", @"6 Reps", @"7 Reps", @"8 Reps", @"9 Reps", @"10 Reps", @"11 Reps", @"12 Reps", @"13 Reps", @"14 Reps", @"15 Reps", @"16 Reps", @"17 Reps", @"18 Reps", @"19 Reps", @"20 Reps", nil];
-    }else if ([ProgramType isEqualToString:@"By Time"]){
-        amount.maximumValue = 125;
-        if(amount.value >= 0 && amount.value <= 60)
-        {
-            self.txtExerciseAmount.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%d Seconds",(int)amount.value ];
-        }
-        if(amount.value >= 61 && amount.value <= 120)
-        {
-            self.txtExerciseAmount.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%d Minutes",(int)amount.value-60 ];
-        }
-        if(amount.value >= 121 && amount.value <= 125)
-        {
-            self.txtExerciseAmount.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%d Hours",(int)amount.value-120 ];
-        }
-        // self.txtExerciseAmount.detailTextLabel.text = @"Choose";
-        // self.txtExerciseAmount.values = [NSArray arrayWithObjects:@"-",@"10 Seconds",@"20 Seconds",@"30 Seconds",@"40 Seconds",@"60 Seconds",@"2 Minutes",@"3 Minutes",@"5 Minutes",@"10 Minutes", @"20 Minutes", @"30 Minutes", @"45 Minutes", @"1 Hours",@"2 Hours", nil];
-        
-    }
+@synthesize exerciseInfo,ProgramType,receivedData,delegate,inputAccView;
     
-    
-}
-
 - (IBAction)selectType:(id)sender {
     
     btnRep.highlighted = YES;
@@ -74,8 +59,11 @@
     
     if(sender == btnTime)
     {
+        [_txtExerciseAmount setUserInteractionEnabled:YES];
+        _txtExerciseAmount.textField.inputView = amountPicker;
         ProgramType = @"By Time";
-        self.txtExerciseAmount.detailTextLabel.text = @"0 Second";
+        _txtExerciseAmount.textField.text = @"";
+        //self.txtExerciseAmount.detailTextLabel.text = @"0 Second";
         amount.value = 0;
         [NSOperationQueue.mainQueue addOperationWithBlock:^{ btnTime.highlighted = NO; }];
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -93,8 +81,11 @@
         self.txtProgramName.values = dataProgram;
         [self.tableView reloadData];
     }else{
+        [_txtExerciseAmount setUserInteractionEnabled:YES];
+        _txtExerciseAmount.textField.inputView = amountRepPicker;
         ProgramType = @"By Rep";
-        self.txtExerciseAmount.detailTextLabel.text = @"0 Rep";
+        _txtExerciseAmount.textField.text =@"";
+        //self.txtExerciseAmount.detailTextLabel.text = @"0 Rep";
         amount.value = 0;
         [NSOperationQueue.mainQueue addOperationWithBlock:^{ btnRep.highlighted = NO; }];
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -128,8 +119,8 @@
     self.txtProgramName.values = dataProgram;
     [self.tableView reloadData];
     
-    
-
+    [_txtExerciseAmount setUserInteractionEnabled:NO];
+    [self createInputAccessoryView];
     
     self.txtProgramType.detailTextLabel.text = ProgramType;
     self.txtProgramName.detailTextLabel.text = @"Select Type";
@@ -152,11 +143,123 @@
     self.txtNewProgram.alpha = 0.2;
     self.txtNewProgram.userInteractionEnabled = NO;
     
+    amountPicker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    amountPicker.delegate = self;
+    amountPicker.dataSource = self;
+    [amountPicker setShowsSelectionIndicator:YES];
+    [amountPicker setUserInteractionEnabled:YES];
     
+    amountRepPicker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    amountRepPicker.delegate = self;
+    amountRepPicker.dataSource = self;
+    [amountRepPicker setShowsSelectionIndicator:YES];
+    [amountRepPicker setUserInteractionEnabled:YES];
     
+    [_txtExerciseAmount.textField setInputAccessoryView:inputAccView];
     
-
+    pickerHr = [[NSMutableArray alloc]init];
+    pickerMin = [[NSMutableArray alloc]init];
+    pickerSec = [[NSMutableArray alloc]init];
+    pickerRep = [[NSMutableArray alloc]init];
+    
+    HrPicker_index=0;
+    MinPicker_index=0;
+    SecPicker_index=0;
+    RepPicker_index=0;
+    for (int i = 0; i<30; i++) [pickerRep addObject:[[NSString alloc] initWithFormat:@"%d",i]];
+    for (int i = 0; i<60; i++) {
+        
+        [pickerHr addObject:[[NSString alloc] initWithFormat:@"%d",i]];
+        [pickerMin addObject:[[NSString alloc] initWithFormat:@"%02d",i]];
+        [pickerSec addObject:[[NSString alloc] initWithFormat:@"%02d",i]];
+    }
+    /*UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    toolBar.barStyle = UIBarStyleBlackOpaque;
+    
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneBtnPressToGetValue)];
+    
+    [toolBar setItems:[NSArray arrayWithObject:btn]];
+    [amountPicker addSubview:toolBar];*/
 }
+
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    
+    if(pickerView == amountPicker){
+    if(component == 0) {
+        HrPicker_index = row;
+    }
+    else if(component == 1) {
+        MinPicker_index = row;
+    }
+    else {
+        SecPicker_index = row;
+    }
+    
+    _txtExerciseAmount.textField.text = [[NSString alloc] initWithFormat:@"%@:%@:%@",[pickerHr objectAtIndex:HrPicker_index],[pickerMin objectAtIndex:MinPicker_index],[pickerSec objectAtIndex:SecPicker_index]];
+    }else{
+        RepPicker_index = row;
+        _txtExerciseAmount.textField.text = [[NSString alloc] initWithFormat:@"%@ Rep",[pickerRep objectAtIndex:RepPicker_index]];
+    }
+    //[self.view endEditing:YES];
+}
+-(void)createInputAccessoryView{
+    // Create the view that will play the part of the input accessory view.
+    // Note that the frame width (third value in the CGRectMake method)
+    // should change accordingly in landscape orientation. But we don’t care
+    // about that now.
+    inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+    
+    // Set the view’s background color. We’ ll set it here to gray. Use any color you want.
+   [inputAccView setBackgroundColor:[UIColor darkGrayColor]];
+    
+    btnDone = [UIButton buttonWithType:UIButtonTypeSystem];
+    [btnDone setFrame:CGRectMake(240.0, 0.0f, 80.0f, 40.0f)];
+    [btnDone setTitle:@"Done" forState:UIControlStateNormal];
+    [btnDone addTarget:self action:@selector(doneTyping) forControlEvents:UIControlEventTouchUpInside];
+    
+    // Now that our buttons are ready we just have to add them to our view.
+    [inputAccView addSubview:btnDone];
+}
+- (void)doneTyping
+{
+    [self.view endEditing:YES];
+}
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    if(pickerView == amountPicker){
+        return 3;
+    }else return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if(pickerView == amountPicker){
+    if(component == 0)
+        return pickerHr.count;
+    else if(component == 1)
+        return pickerMin.count;
+    else
+        return pickerSec.count;
+    }else{
+        return pickerRep.count;
+    }
+    
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if(pickerView == amountPicker){
+    if(component == 0)
+        return [pickerHr objectAtIndex:row];
+    else if(component == 1)
+        return [pickerMin objectAtIndex:row];
+    else
+        return [pickerSec objectAtIndex:row];
+    }else{
+        return [pickerRep objectAtIndex:row];
+    }
+}
+
+
 -(void)getData
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -313,6 +416,9 @@
         }
     }
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.tableView endEditing:YES];// this will do the trick
+}
 
 - (IBAction)addExercise:(id)sender {
     
@@ -320,7 +426,7 @@
     NSString *name = self.txtNewProgram.textField.text;
     NSString *type = ProgramType;
     NSString *exid = [exerciseInfo valueForKey:@"ExerciseID"];
-    NSString *exAmount =self.txtExerciseAmount.detailTextLabel.text;
+    NSString *exAmount =self.txtExerciseAmount.textField.text;
     
     if (exAmount == NULL) return;
     

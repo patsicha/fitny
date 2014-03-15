@@ -40,10 +40,14 @@
 
 -(void) initTxt
 {
-    _lblwelcome.font = font1(20);
-    titleLabel.font = font2(30);
-    weightLabel.font = font2(12);
-    heightLabel.font = font2(12);
+  //  _lblwelcome.font = fontthai(30);
+   // titleLabel.font = fontthai(40);
+   // weightLabel.font = fontthai(16);
+   // heightLabel.font = fontthai(16);
+   // _lbl0.font = fontthai(25);
+   // _lbl1.font = fontthai(25);
+   // _lbl2.font = fontthai(25);
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSMutableArray *MemberInfo = [prefs objectForKey:@"MemberInfo"];
     titleLabel.text = [[NSString alloc] initWithFormat:@"%@",[MemberInfo valueForKey:@"name"]];

@@ -12,4 +12,5 @@
 @property(nonatomic,retain) NSMutableData *receivedData;
 @property(nonatomic,strong) NSString *pid;
 @property(nonatomic,strong) NSString *pname;
+@property(nonatomic,strong) NSString *ptype;
 @end

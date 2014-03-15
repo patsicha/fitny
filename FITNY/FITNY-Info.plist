@@ -28,6 +28,7 @@
 	<array>
 		<string>LANENAR.ttf</string>
 		<string>KGAlwaysAGoodTime.ttf</string>
+		<string>thai.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Storyboard</string>

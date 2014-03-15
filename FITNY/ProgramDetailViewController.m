@@ -8,6 +8,8 @@
 
 #import "ProgramDetailViewController.h"
 #import "ExerciseTabBarController.h"
+#import "ProgramSettingsViewController.h"
+
 @interface ProgramDetailViewController ()
 {
     UIAlertView *loading;
@@ -26,6 +28,11 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)settings:(id)sender {
+    ProgramSettingsViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"programSettings"];
+    svc.ptype = _ptype;
+    [self presentPopupViewController:svc animationType:MJPopupViewAnimationFade];
 }
 
 - (void)viewDidLoad

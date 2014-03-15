@@ -203,6 +203,7 @@
     ProgramDetailViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProgramDetail"];
     svc.pid = [programInfo valueForKey:@"id"];
     svc.pname = [programInfo valueForKey:@"name"];
+    svc.ptype = [programInfo valueForKey:@"type"];
     [self.tabBarController.navigationController pushViewController:svc animated:YES];
 }
 @end
