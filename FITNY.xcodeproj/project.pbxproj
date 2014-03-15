@@ -107,7 +107,6 @@
 		1C40DEE818D0C1EE00E61A32 /* ProgramSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40DEE718D0C1EE00E61A32 /* ProgramSettingsViewController.m */; };
 		1C43921118510EB0005DB09D /* TabProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43921018510EB0005DB09D /* TabProgramViewController.m */; };
 		1C43921418511072005DB09D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43921318511072005DB09D /* CalendarViewController.m */; };
-		1C45A9AE18C4CAB300892C88 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C45A9AD18C4CAB300892C88 /* Images-2.xcassets */; };
 		1C4A501F18325A1F00A9DA8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A501E18325A1F00A9DA8D /* Foundation.framework */; };
 		1C4A502118325A1F00A9DA8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A502018325A1F00A9DA8D /* CoreGraphics.framework */; };
 		1C4A502318325A1F00A9DA8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A502218325A1F00A9DA8D /* UIKit.framework */; };
@@ -1101,7 +1100,6 @@
 		1C43921018510EB0005DB09D /* TabProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabProgramViewController.m; sourceTree = "<group>"; };
 		1C43921218511072005DB09D /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		1C43921318511072005DB09D /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		1C45A9AD18C4CAB300892C88 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		1C4A501B18325A1F00A9DA8D /* FITNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4A501E18325A1F00A9DA8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C4A502018325A1F00A9DA8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -2248,7 +2246,6 @@
 				1C4A505318325A6000A9DA8D /* Class */,
 				1C4A503518325A1F00A9DA8D /* Images.xcassets */,
 				1C4A503218325A1F00A9DA8D /* FITNY.xcdatamodeld */,
-				1C45A9AD18C4CAB300892C88 /* Images-2.xcassets */,
 				1C4A502718325A1F00A9DA8D /* Supporting Files */,
 			);
 			path = FITNY;
@@ -4447,7 +4444,6 @@
 				1CE765FB1844F4AC00A1898D /* Triceps Stretch.jpg in Resources */,
 				1CE765B11844F4AC00A1898D /* Chin Up.jpg in Resources */,
 				1CE765651844F4AC00A1898D /* Triceps Pushdown.txt in Resources */,
-				1C45A9AE18C4CAB300892C88 /* Images-2.xcassets in Resources */,
 				1CE766151844F4AC00A1898D /* Scissor Kick.mp4 in Resources */,
 				1CE764F51844F4AC00A1898D /* Dumbbell Bench Press.txt in Resources */,
 				1CE766001844F4AC00A1898D /* Seated Triceps Press.jpg in Resources */,
