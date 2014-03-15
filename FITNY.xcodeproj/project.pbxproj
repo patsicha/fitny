@@ -92,6 +92,15 @@
 		1C131185185513970079552C /* DateInputTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C131184185513970079552C /* DateInputTableViewCell2.m */; };
 		1C131189185532DD0079552C /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C131188185532DD0079552C /* WorkoutViewController.m */; };
 		1C13118C18563DE40079552C /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C13118B18563DE40079552C /* WorkoutDetailViewController.m */; };
+		1C13301F18D4E6D800C0716E /* login.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301618D4E6D800C0716E /* login.php */; };
+		1C13302018D4E6D800C0716E /* addEx.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301718D4E6D800C0716E /* addEx.php */; };
+		1C13302118D4E6D800C0716E /* addExNew.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301818D4E6D800C0716E /* addExNew.php */; };
+		1C13302218D4E6D800C0716E /* addToCalendar.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301918D4E6D800C0716E /* addToCalendar.php */; };
+		1C13302318D4E6D800C0716E /* listCalendar.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301A18D4E6D800C0716E /* listCalendar.php */; };
+		1C13302418D4E6D800C0716E /* listProgram.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301B18D4E6D800C0716E /* listProgram.php */; };
+		1C13302518D4E6D800C0716E /* loadDetailProgram.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301C18D4E6D800C0716E /* loadDetailProgram.php */; };
+		1C13302618D4E6D800C0716E /* memberInfo.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301D18D4E6D800C0716E /* memberInfo.php */; };
+		1C13302718D4E6D800C0716E /* register.php in Resources */ = {isa = PBXBuildFile; fileRef = 1C13301E18D4E6D800C0716E /* register.php */; };
 		1C21E64018C553C5008D3F3F /* addExViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C21E63F18C553C5008D3F3F /* addExViewController.m */; };
 		1C2AFC7E18BCB4FB001EC3BA /* button01_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2AFC7718BCB4FB001EC3BA /* button01_white.png */; };
 		1C2AFC7F18BCB4FB001EC3BA /* littleclock.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2AFC7818BCB4FB001EC3BA /* littleclock.png */; };
@@ -1078,6 +1087,15 @@
 		1C131188185532DD0079552C /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
 		1C13118A18563DE40079552C /* WorkoutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDetailViewController.h; sourceTree = "<group>"; };
 		1C13118B18563DE40079552C /* WorkoutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutDetailViewController.m; sourceTree = "<group>"; };
+		1C13301618D4E6D800C0716E /* login.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
+		1C13301718D4E6D800C0716E /* addEx.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = addEx.php; sourceTree = "<group>"; };
+		1C13301818D4E6D800C0716E /* addExNew.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = addExNew.php; sourceTree = "<group>"; };
+		1C13301918D4E6D800C0716E /* addToCalendar.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = addToCalendar.php; sourceTree = "<group>"; };
+		1C13301A18D4E6D800C0716E /* listCalendar.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = listCalendar.php; sourceTree = "<group>"; };
+		1C13301B18D4E6D800C0716E /* listProgram.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = listProgram.php; sourceTree = "<group>"; };
+		1C13301C18D4E6D800C0716E /* loadDetailProgram.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = loadDetailProgram.php; sourceTree = "<group>"; };
+		1C13301D18D4E6D800C0716E /* memberInfo.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = memberInfo.php; sourceTree = "<group>"; };
+		1C13301E18D4E6D800C0716E /* register.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = register.php; sourceTree = "<group>"; };
 		1C21E63E18C553C5008D3F3F /* addExViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addExViewController.h; sourceTree = "<group>"; };
 		1C21E63F18C553C5008D3F3F /* addExViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addExViewController.m; sourceTree = "<group>"; };
 		1C2AFC7718BCB4FB001EC3BA /* button01_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button01_white.png; sourceTree = "<group>"; };
@@ -2150,6 +2168,22 @@
 			name = Workout;
 			sourceTree = "<group>";
 		};
+		1C13301318D4E6A700C0716E /* PHP Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C13301618D4E6D800C0716E /* login.php */,
+				1C13301718D4E6D800C0716E /* addEx.php */,
+				1C13301818D4E6D800C0716E /* addExNew.php */,
+				1C13301918D4E6D800C0716E /* addToCalendar.php */,
+				1C13301A18D4E6D800C0716E /* listCalendar.php */,
+				1C13301B18D4E6D800C0716E /* listProgram.php */,
+				1C13301C18D4E6D800C0716E /* loadDetailProgram.php */,
+				1C13301D18D4E6D800C0716E /* memberInfo.php */,
+				1C13301E18D4E6D800C0716E /* register.php */,
+			);
+			name = "PHP Files";
+			sourceTree = "<group>";
+		};
 		1C2AFC7618BCB4FB001EC3BA /* Today_workout_page */ = {
 			isa = PBXGroup;
 			children = (
@@ -2235,6 +2269,7 @@
 		1C4A502618325A1F00A9DA8D /* FITNY */ = {
 			isa = PBXGroup;
 			children = (
+				1C13301318D4E6A700C0716E /* PHP Files */,
 				1CCB814918A0DFDE009614EC /* UI Natty */,
 				1C72528118A0DD08008E8749 /* Font */,
 				1CF69E5C1898182B00DBBA28 /* Timer */,
@@ -4275,6 +4310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE765921844F4AC00A1898D /* Decline Dumbbell Flyes.jpg in Resources */,
+				1C13302518D4E6D800C0716E /* loadDetailProgram.php in Resources */,
 				1CE765171844F4AC00A1898D /* All Fours Quad Stretch.txt in Resources */,
 				1CE7662D1844F4AC00A1898D /* One Arm Dumbbell Preacher Curl.mp4 in Resources */,
 				1CE0D06918327D78004FA073 /* 56-cloud.png in Resources */,
@@ -4392,6 +4428,7 @@
 				1CE765AD1844F4AC00A1898D /* Close Grip Front Lat Pulldown.jpg in Resources */,
 				1CE764EA1844F4AC00A1898D /* Seated Dumbbell Curl.txt in Resources */,
 				1CE7665A1844F4AC00A1898D /* Chin Up.mp4 in Resources */,
+				1C13302718D4E6D800C0716E /* register.php in Resources */,
 				1CE765FF1844F4AC00A1898D /* Dumbbell One Arm Triceps Extension.jpg in Resources */,
 				1CE765501844F4AC00A1898D /* Front Dumbbell Raise.txt in Resources */,
 				1CE765101844F4AC00A1898D /* Elevated Cable Rows.txt in Resources */,
@@ -4433,6 +4470,7 @@
 				1CE765131844F4AC00A1898D /* Chin Up.txt in Resources */,
 				1CE765F81844F4AC00A1898D /* Scapular Pull Up.jpg in Resources */,
 				1CE765C21844F4AC00A1898D /* Bodyweight Squat.jpg in Resources */,
+				1C13302618D4E6D800C0716E /* memberInfo.php in Resources */,
 				1CE0CFE418327D78004FA073 /* 112-group.png in Resources */,
 				1C2AFC7F18BCB4FB001EC3BA /* littleclock.png in Resources */,
 				1CE0D06518327D78004FA073 /* 52-pine-tree.png in Resources */,
@@ -4516,6 +4554,7 @@
 				1CCB817F18A0E647009614EC /* workout_bg01.png in Resources */,
 				1CE764CC1844F4AC00A1898D /* Lower Back Curl.txt in Resources */,
 				1CCB815C18A0E1B2009614EC /* login_bg.png in Resources */,
+				1C13302318D4E6D800C0716E /* listCalendar.php in Resources */,
 				1CE0D09118327D78004FA073 /* 95-equalizer.png in Resources */,
 				1CE766171844F4AC00A1898D /* Ball Pull In.mp4 in Resources */,
 				1CE765281844F4AC00A1898D /* Scissors Jump.txt in Resources */,
@@ -4631,6 +4670,7 @@
 				1CE0D05A18327D78004FA073 /* 41-picture-frame.png in Resources */,
 				1CE0D00518327D78004FA073 /* 142-wine-bottle.png in Resources */,
 				1CE0D01018327D78004FA073 /* 152-rolodex.png in Resources */,
+				1C13302218D4E6D800C0716E /* addToCalendar.php in Resources */,
 				1CE0CFDD18327D78004FA073 /* 106-sliders.png in Resources */,
 				1CE764FF1844F4AC00A1898D /* Push Ups.txt in Resources */,
 				1CE766061844F4AC00A1898D /* Body Up.jpg in Resources */,
@@ -4666,6 +4706,7 @@
 				1CE766801844F4AC00A1898D /* Bent Over Two Arm Long Bar Row.mp4 in Resources */,
 				1CE0D01218327D78004FA073 /* 154-necktie.png in Resources */,
 				1CE764DB1844F4AC00A1898D /* Alternate Hammer Curl.txt in Resources */,
+				1C13301F18D4E6D800C0716E /* login.php in Resources */,
 				1CE0D00C18327D78004FA073 /* 149-windmill.png in Resources */,
 				1CE765211844F4AC00A1898D /* Leg Extensions.txt in Resources */,
 				1CE764D61844F4AC00A1898D /* Plank.txt in Resources */,
@@ -4696,6 +4737,7 @@
 				1CE0D06D18327D78004FA073 /* 60-signpost.png in Resources */,
 				1CE764ED1844F4AC00A1898D /* Behind Head Chest Stretch.txt in Resources */,
 				1CE765311844F4AC00A1898D /* Rack Pulls.txt in Resources */,
+				1C13302418D4E6D800C0716E /* listProgram.php in Resources */,
 				1CE765541844F4AC00A1898D /* Upright Barbell Row.txt in Resources */,
 				1CE0D08218327D78004FA073 /* 81-dashboard.png in Resources */,
 				1CE766051844F4AC00A1898D /* Body Tricep Press.jpg in Resources */,
@@ -4914,6 +4956,7 @@
 				1CE766961844F4AC00A1898D /* Dumbbell Shoulder Press.mp4 in Resources */,
 				1CE765891844F4AC00A1898D /* Two Arm Dumbbell Preacher Curl.jpg in Resources */,
 				1CE765C11844F4AC00A1898D /* Bench Jump.jpg in Resources */,
+				1C13302018D4E6D800C0716E /* addEx.php in Resources */,
 				1CE0CFEB18327D78004FA073 /* 119-piggy-bank.png in Resources */,
 				1CE7659F1844F4AC00A1898D /* Finger Curls.jpg in Resources */,
 				1CE765AE1844F4AC00A1898D /* Elevated Cable Rows.jpg in Resources */,
@@ -4934,6 +4977,7 @@
 				1CE765A51844F4AC00A1898D /* Seated One Arm Dumbbell Palms Up Wrist Curl.jpg in Resources */,
 				1CE765751844F4AC00A1898D /* Side Bridge.jpg in Resources */,
 				1CE7664C1844F4AC00A1898D /* Seated Dumbbell Palms Up Wrist Curl.mp4 in Resources */,
+				1C13302118D4E6D800C0716E /* addExNew.php in Resources */,
 				1CE0D09418327D78004FA073 /* 98-palette.png in Resources */,
 				1CE0CFF118327D78004FA073 /* 124-bullhorn.png in Resources */,
 				1CE766A71844F4AC00A1898D /* Close Grip EZBar Press.mp4 in Resources */,
