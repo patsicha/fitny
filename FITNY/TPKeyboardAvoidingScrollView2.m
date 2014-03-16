@@ -5,13 +5,13 @@
 //  Copyright 2011 A Tasty Pixel. All rights reserved.
 //
 
-#import "TPKeyboardAvoidingScrollView.h"
+#import "TPKeyboardAvoidingScrollView2.h"
 
 #define _UIKeyboardFrameEndUserInfoKey (&UIKeyboardFrameEndUserInfoKey != NULL ? UIKeyboardFrameEndUserInfoKey : @"UIKeyboardBoundsUserInfoKey")
 
-const CGFloat kCalculatedContentPadding = 10;
+const CGFloat kCalculatedContentPadding2 = 10;
 
-@interface TPKeyboardAvoidingScrollView () <UITextFieldDelegate, UITextViewDelegate> {
+@interface TPKeyboardAvoidingScrollView2 () <UITextFieldDelegate, UITextViewDelegate> {
     UIEdgeInsets    _priorInset;
     UIEdgeInsets    _priorScrollIndicatorInsets;
     BOOL            _keyboardVisible;
@@ -25,7 +25,7 @@ const CGFloat kCalculatedContentPadding = 10;
 - (CGRect)keyboardRect;
 @end
 
-@implementation TPKeyboardAvoidingScrollView
+@implementation TPKeyboardAvoidingScrollView2
 
 #pragma mark - Setup/Teardown
 
@@ -80,7 +80,7 @@ const CGFloat kCalculatedContentPadding = 10;
 - (void)keyboardWillShow:(NSNotification*)notification {
     if ( CGSizeEqualToSize(self.contentSize, CGSizeZero) ) {
         // Set the content size, if it's not set
-        self.contentSize = CGSizeMake(_contentsSize.width + kCalculatedContentPadding, _contentsSize.height + kCalculatedContentPadding);
+        self.contentSize = CGSizeMake(_contentsSize.width + kCalculatedContentPadding2, _contentsSize.height + kCalculatedContentPadding2);
     }
     
     _keyboardRect = [[[notification userInfo] objectForKey:_UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -257,8 +257,7 @@ const CGFloat kCalculatedContentPadding = 10;
     }
     
     if (offset < 0) offset = 0;
-    
-    return offset-100;
+    return offset;
 }
 
 - (CGRect)keyboardRect {
