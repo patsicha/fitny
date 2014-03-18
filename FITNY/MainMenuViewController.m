@@ -106,6 +106,8 @@
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setObject:nil  forKey:@"MemberInfo"];
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)changeLanguege:(BOOL)ss

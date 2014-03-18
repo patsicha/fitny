@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CalendarViewController : UIViewController <TKCalendarMonthViewDelegate,TKCalendarMonthViewDataSource,UITableViewDataSource,UITableViewDelegate,UITabBarControllerDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableDictionary *dataDictionary;
 @property(nonatomic,retain) NSMutableData *receivedData;

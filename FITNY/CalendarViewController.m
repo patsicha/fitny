@@ -20,6 +20,7 @@
     NSMutableArray *dayProgramDetail;
     NSMutableArray *program;
 }
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation CalendarViewController
@@ -33,6 +34,29 @@
     
     
 
+}
+-(UITableView *)makeTableView
+{
+    CGFloat x = 0;
+    CGFloat y = 275;
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height - 50;
+    CGRect tableFrame = CGRectMake(x, y, width, height);
+    
+    UITableView *tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
+    
+    tableView.rowHeight = 45;
+    tableView.sectionFooterHeight = 22;
+    tableView.sectionHeaderHeight = 22;
+    tableView.scrollEnabled = YES;
+    tableView.showsVerticalScrollIndicator = YES;
+    tableView.userInteractionEnabled = YES;
+    tableView.bounces = YES;
+    
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    
+    return tableView;
 }
 
 
@@ -58,9 +82,17 @@
     calendar1.dataSource = self;
     
     [calendar1 selectDate:[NSDate date]];
+    self.tableView = [self makeTableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [self.view addSubview:self.tableView];
     NSLog(@"%f",self.tableView.frame.origin.y);
     [self.view addSubview:calendar1];
     [calendar1 reloadData];
+    
+    if(calendar1.bounds.size.height < 300)
+        _tableView.frame = CGRectMake(_tableView.frame.origin.x,calendar1.bounds.size.height+10, _tableView.frame.size.width, 146);
+    else
+        _tableView.frame = CGRectMake(_tableView.frame.origin.x,calendar1.bounds.size.height+10, _tableView.frame.size.width, 146-44);
     
     //[self getData];
 }
